@@ -1,0 +1,22 @@
+<launch>
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+    <!-- 开启机器人底层相关节点  -->
+    <include file="$(find turn_on_wheeltec_robot)/launch/turn_on_wheeltec_robot.launch" />
+
+    <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+
+    
+
+    <!-- <node name="control" pkg="deskmedia" type="control.py" output="screen"> -->
+    <node name="common_node" pkg="deskmedia" type="common_node" output="screen">
+        <param name="move_speed"  value="0.03"/>
+        <param name="spin_speed"  value="0.12"/>
+        <param name="scale_factor_x" value="1.000000"/>
+        <param name="scale_factor_z" value="1.000000"/>
+    </node>
+
+    <!-- type="float32" 
+    <node pkg="deskmedia" type="common_node" name="common_node" output="screen" respawn="false">
+        
+    </node> -->
+</launch>

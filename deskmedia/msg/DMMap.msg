@@ -1,0 +1,10 @@
+float32 resolution
+uint32 width
+uint32 height
+float32 origin_x
+float32 origin_y
+float32 origin_z
+float32 car_x
+float32 car_y
+float32 car_z
+uint32 index

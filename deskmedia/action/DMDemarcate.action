@@ -1,0 +1,6 @@
+uint32 type
+float32 target
+---
+float32 actual
+---
+float32 percent
